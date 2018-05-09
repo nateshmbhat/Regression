@@ -13,12 +13,10 @@ fib = [] ;
 n = [i for i in range(100)]
 
 for i in range(100):
-    fib.append(a) ; 
-    a , b  = b , c ; 
-    c = a+b ; 
+    fib.append(i**2 + 4*i - 4) ; 
 
-data = pd.DataFrame({'n' : n , 'fib' : fib} , dtype=str) ; 
-data = data[['n' , 'fib']]
+data = pd.DataFrame({'x' : n , 'y' : fib} , dtype=str) ; 
+data = data[['x' , 'y']] ; 
 
 print(data) ;
 data.to_csv('fibonacci' , index=False) ; 
