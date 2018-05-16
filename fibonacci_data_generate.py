@@ -10,18 +10,15 @@ c = a+b ;
 
 
 fib = [] ; 
-n = [i for i in range(100)]
+n = [i for i in range(30)]
 
-for i in range(100):
-    fib.append(i**2 + 4*i - 4) ; 
+for i in range(30):
+    fib.append(a) ; 
+    a, b= b , c ;
+    c = a+b ; 
 
 data = pd.DataFrame({'x' : n , 'y' : fib} , dtype=str) ; 
 data = data[['x' , 'y']] ; 
 
 print(data) ;
-data.to_csv('fibonacci' , index=False) ; 
-
-
-
-
-
+data.to_csv('fibonacciData' , index=False) ; 

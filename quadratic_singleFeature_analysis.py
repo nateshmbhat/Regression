@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt ;
 import os , sys , subprocess , time  ; 
 
 
-class fibonacii:
+class quadratic:
 
     def __init__(self):
         self.hypothesis = "fib(n) = w1 * x1^2  + w2 * x1 + b"
@@ -12,6 +12,7 @@ class fibonacii:
         self.w2 = np.random.uniform() ; 
         self.b = np.random.uniform() ; 
         self.data = np.genfromtxt('./quadraticData' , delimiter=',' , dtype='int') ; 
+        self.true_equation = "y = i**2 + 4*i - 4 " ; 
         self.features = self.data[: , 0] ; 
         self.target = self.data[: , 1]
         self.alpha = 0.00000000032389329 ;
@@ -49,5 +50,5 @@ class fibonacii:
                 print(self.cost()) ;
         
         
-obj = fibonacii() ; 
+obj = quadratic() ; 
 obj.train() ; 
